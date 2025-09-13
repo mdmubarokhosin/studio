@@ -1,3 +1,77 @@
+
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero1",
+      "description": "Madrasa building with students in front",
+      "imageUrl": "https://picsum.photos/seed/hero1/1920/1080",
+      "imageHint": "education building"
+    },
+    {
+      "id": "hero2",
+      "description": "Students in a classroom studying",
+      "imageUrl": "https://picsum.photos/seed/hero2/1920/1080",
+      "imageHint": "students classroom"
+    },
+    {
+      "id": "hero3",
+      "description": "Library with many books",
+      "imageUrl": "https://picsum.photos/seed/hero3/1920/1080",
+      "imageHint": "library books"
+    },
+    {
+      "id": "gallery1",
+      "description": "Annual sports event",
+      "imageUrl": "https://picsum.photos/seed/gallery1/600/400",
+      "imageHint": "sports event"
+    },
+    {
+      "id": "gallery2",
+      "description": "Prize giving ceremony",
+      "imageUrl": "https://picsum.photos/seed/gallery2/600/400",
+      "imageHint": "prize ceremony"
+    },
+    {
+      "id": "gallery3",
+      "description": "Students planting trees",
+      "imageUrl": "https://picsum.photos/seed/gallery3/600/400",
+      "imageHint": "students nature"
+    },
+    {
+      "id": "gallery4",
+      "description": "Cultural program performance",
+      "imageUrl": "https://picsum.photos/seed/gallery4/600/400",
+      "imageHint": "cultural performance"
+    },
+    {
+      "id": "gallery5",
+      "description": "Science fair project",
+      "imageUrl": "https://picsum.photos/seed/gallery5/600/400",
+      "imageHint": "science fair"
+    },
+    {
+      "id": "gallery6",
+      "description": "Graduation day",
+      "imageUrl": "https://picsum.photos/seed/gallery6/600/400",
+      "imageHint": "graduation day"
+    },
+    {
+      "id": "manager1",
+      "description": "Profile picture of the principal",
+      "imageUrl": "https://picsum.photos/seed/manager1/400/400",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "manager2",
+      "description": "Profile picture of the vice-principal",
+      "imageUrl": "https://picsum.photos/seed/manager2/400/400",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "manager3",
+      "description": "Profile picture of the head of education",
+      "imageUrl": "https://picsum.photos/seed/manager3/400/400",
+      "imageHint": "woman portrait"
+    }
+  ]
 }
