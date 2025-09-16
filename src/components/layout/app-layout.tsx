@@ -14,6 +14,7 @@ import {
   SidebarInset,
   SidebarTrigger,
   useSidebar,
+  SheetTitle,
 } from '@/components/ui/sidebar';
 import { appName, navLinks } from '@/data/content';
 
@@ -48,6 +49,7 @@ function AppSidebar() {
   return (
     <Sidebar>
       <SidebarHeader>
+        <SheetTitle className="sr-only">Menu</SheetTitle>
         <Link
           href="/"
           className="font-headline text-xl font-bold text-primary"
@@ -60,8 +62,9 @@ function AppSidebar() {
         <SidebarMenu>
           {navLinks.map((link) => (
             <SidebarMenuItem key={link.href}>
-              <Link href={link.href} passHref asChild>
+              <Link href={link.href} passHref legacyBehavior>
                 <SidebarMenuButton
+                  as="a"
                   isActive={pathname === link.href}
                   onClick={handleLinkClick}
                 >
