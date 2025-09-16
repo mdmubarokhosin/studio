@@ -60,12 +60,8 @@ function AppSidebar() {
         <SidebarMenu>
           {navLinks.map((link) => (
             <SidebarMenuItem key={link.href}>
-              <Link href={link.href} passHref legacyBehavior>
-                <SidebarMenuButton
-                  as="a"
-                  isActive={pathname === link.href}
-                  onClick={handleLinkClick}
-                >
+              <Link href={link.href} onClick={handleLinkClick}>
+                <SidebarMenuButton isActive={pathname === link.href}>
                   <link.icon />
                   {link.label}
                 </SidebarMenuButton>
