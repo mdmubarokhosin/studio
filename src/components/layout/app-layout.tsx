@@ -16,7 +16,6 @@ import {
   useSidebar,
 } from '@/components/ui/sidebar';
 import { appName, navLinks } from '@/data/content';
-import { SheetTitle } from '@/components/ui/sheet';
 
 function AppHeader() {
   const { isMobile } = useSidebar();
@@ -49,7 +48,6 @@ function AppSidebar() {
   return (
     <Sidebar collapsible="offcanvas" variant="floating">
       <SidebarHeader>
-        <SheetTitle className="sr-only">Main Menu</SheetTitle>
         <Link
           href="/"
           className="font-headline text-xl font-bold text-primary"
