@@ -18,6 +18,17 @@ export type HeroSlide = {
   };
 };
 
+export type HistoryMilestone = {
+  year: string;
+  description: string;
+};
+
+export type HistoryContent = {
+  title: string;
+  founding: string;
+  milestones: HistoryMilestone[];
+};
+
 export type StatItem = {
   label: string;
   value: number;
