@@ -16,15 +16,14 @@ import {
   useSidebar,
 } from '@/components/ui/sidebar';
 import { appName, navLinks } from '@/data/content';
-import { SheetTitle } from '../ui/sheet';
 
 function AppHeader() {
-  const { isMobile } = useSidebar();
+  const { isMobile, toggleSidebar } = useSidebar();
   return (
     <header className="sticky top-0 z-40 flex h-14 items-center gap-4 border-b bg-background/80 px-4 backdrop-blur-sm md:h-16 md:px-6">
       <div className="flex w-full items-center justify-between">
         <div className="flex items-center gap-2">
-          {isMobile && <SidebarTrigger />}
+          {isMobile && <SidebarTrigger onClick={toggleSidebar} />}
           <Link
             href="/"
             className="font-headline text-lg md:text-xl font-bold text-primary"
@@ -32,7 +31,7 @@ function AppHeader() {
             {appName}
           </Link>
         </div>
-        {!isMobile && <SidebarTrigger />}
+        {!isMobile && <SidebarTrigger onClick={toggleSidebar} />}
       </div>
     </header>
   );
@@ -47,8 +46,7 @@ function AppSidebar() {
   };
 
   return (
-    <Sidebar collapsible="offcanvas" variant="floating">
-      <SheetTitle className="sr-only">Main Menu</SheetTitle>
+    <Sidebar>
       <SidebarHeader>
         <Link
           href="/"
@@ -62,7 +60,7 @@ function AppSidebar() {
         <SidebarMenu>
           {navLinks.map((link) => (
             <SidebarMenuItem key={link.href}>
-              <Link href={link.href} passHref legacyBehavior>
+              <Link href={link.href} passHref>
                 <SidebarMenuButton
                   as="a"
                   isActive={pathname === link.href}
@@ -84,10 +82,12 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (
     <SidebarProvider>
       <AppSidebar />
-      <SidebarInset className="flex min-h-screen flex-col">
-        <AppHeader />
-        <div className="flex-1">{children}</div>
-      </SidebarInset>
+      <div className="flex min-h-screen flex-col">
+        <SidebarInset>
+          <AppHeader />
+          <div className="flex-1">{children}</div>
+        </SidebarInset>
+      </div>
     </SidebarProvider>
   );
 }
