@@ -48,24 +48,24 @@
     { "label": "আবাসিক", "value": 300, "icon": "Building" }
   ],
   "programs": [
-      { "title": "হিফজুল কুরআন", "description": "বিশুদ্ধ তাজবীদসহ আন্তর্জাতিক মানের হিফজ বিভাগ।" },
-      { "title": "কিতাব বিভাগ", "description": " নাহবেমীর থেকে দাওরায়ে হাদীস (মাস্টার্স) পর্যন্ত।" },
-      { "title": "ফতোয়া বিভাগ", "description": "ইসলামী আইন ও ফিকহ বিষয়ে বিশেষায়িত গবেষণা।" },
-      { "title": "কম্পিউটার শিক্ষা", "description": "আধুনিক প্রযুক্তির সাথে শিক্ষার্থীদের পরিচয় ঘটানো।" }
+    { "title": "হিফজুল কুরআন বিভাগ", "description": "বিশুদ্ধ তাজবীদসহ সম্পূর্ণ কুরআন মুখস্থ করার বিশেষ ব্যবস্থা।" },
+    { "title": "কিতাব বিভাগ", "description": "ইসলামী জ্ঞান-বিজ্ঞানের বিভিন্ন শাখায় পাণ্ডিত্য অর্জনের জন্য প্রণীত পাঠ্যক্রম।" },
+    { "title": "ফতোয়া ও গবেষণা", "description": "ইসলামী আইন ও বিধান সম্পর্কে গভীর জ্ঞানদান এবং ফতোয়া প্রদানের প্রশিক্ষণ।" },
+    { "title": "কম্পিউটার প্রশিক্ষণ", "description": "আধুনিক প্রযুক্তির সাথে তাল মিলিয়ে চলার জন্য বেসিক কম্পিউটার প্রশিক্ষণ।" }
   ],
   "notices": [
-    { "id": 1, "title": "২০২৪ সালের বার্ষিক পরীক্ষার ফলাফল প্রকাশিত হয়েছে।", "date": "২০ জুন, ২০২৪", "link": "#", "isNew": true },
+    { "id": 1, "title": "২০২৪ সালের বার্ষিক পরীক্ষার রুটিন প্রকাশিত হয়েছে।", "date": "২০ জুন, ২০২৪", "link": "#", "isNew": true },
     { "id": 2, "title": "ঈদুল আযহা উপলক্ষে মাদ্রাসা ছুটি সংক্রান্ত নোটিশ।", "date": "১০ জুন, ২০২৪", "link": "#", "isNew": false },
-    { "id": 3, "title": "নতুন শিক্ষাবর্ষে (২০২৫) ভর্তি কার্যক্রম শুরু।", "date": "০১ জুন, ২০২৪", "link": "#", "isNew": false },
-    { "id": 4, "title": "অভিভাবক সমাবেশ আগামী শুক্রবার সকাল ১০টায় অনুষ্ঠিত হবে।", "date": "২৫ মে, ২০২৪", "link": "#", "isNew": false }
+    { "id": 3, "title": "নতুন শিক্ষাবর্ষে ভর্তি কার্যক্রম শুরু।", "date": "০১ জুন, ২০২৪", "link": "#", "isNew": false },
+    { "id": 4, "title": "অভিভাবক সমাবেশ আগামী শুক্রবার অনুষ্ঠিত হবে।", "date": "২৫ মে, ২০২৪", "link": "#", "isNew": false }
   ],
   "galleryImages": [
     { "id": "gallery1", "src": "https://picsum.photos/seed/gallery1/600/400", "alt": "বার্ষিক ক্রীড়া প্রতিযোগিতা", "hint": "sports event" },
     { "id": "gallery2", "src": "https://picsum.photos/seed/gallery2/600/400", "alt": "পুরস্কার বিতরণী অনুষ্ঠান", "hint": "prize ceremony" },
-    { "id": "gallery3", "src": "https://picsum.photos/seed/gallery3/600/400", "alt": "ছাত্রদের লাইব্রেরি", "hint": "students library" },
+    { "id": "gallery3", "src": "https://picsum.photos/seed/gallery3/600/400", "alt": "বৃক্ষরোপণ কর্মসূচি", "hint": "students nature" },
     { "id": "gallery4", "src": "https://picsum.photos/seed/gallery4/600/400", "alt": "সাংস্কৃতিক অনুষ্ঠান", "hint": "cultural performance" },
-    { "id": "gallery5", "src": "https://picsum.photos/seed/gallery5/600/400", "alt": "মাদ্রাসার ভবন", "hint": "madrasa building" },
-    { "id": "gallery6", "src": "https://picsum.photos/seed/gallery6/600/400", "alt": "毕业典礼", "hint": "graduation day" }
+    { "id": "gallery5", "src": "https://picsum.photos/seed/gallery5/600/400", "alt": "বিজ্ঞান মেলা", "hint": "science fair" },
+    { "id": "gallery6", "src": "https://picsum.photos/seed/gallery6/600/400", "alt": "সমাবর্তন অনুষ্ঠান", "hint": "graduation day" }
   ],
   "management": [
     { "id": "manager1", "name": "মাওলানা আব্দুল্লাহ", "position": "অধ্যক্ষ", "image": "https://picsum.photos/seed/manager1/400/400", "imageHint": "man portrait" },
@@ -81,7 +81,7 @@
   "footerContent": {
     "address": "মাহমুদপুর, উত্তর চন্দন পারুলিয়া, সোনাগাজী, ফেনী।",
     "phone": "+880 1234 567890",
-    "email": "info@ashrafululoom.com"
+    "email": "info@madrasa.edu.bd"
   },
   "socialLinks": [
     { "name": "Facebook", "href": "#", "icon": "Facebook" },
