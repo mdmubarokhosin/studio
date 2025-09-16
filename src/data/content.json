@@ -119,7 +119,10 @@
   "management": [
     { "id": "manager1", "name": "মাওলানা আব্দুল্লাহ", "position": "অধ্যক্ষ", "image": "https://picsum.photos/seed/manager1/400/400", "imageHint": "man portrait" },
     { "id": "manager2", "name": "মুফতি ইব্রাহিম", "position": "উপাধ্যক্ষ", "image": "https://picsum.photos/seed/manager2/400/400", "imageHint": "man portrait" },
-    { "id": "manager3", "name": "আলহাজ্জা ফাতেমা বেগম", "position": "শিক্ষা সচিব", "image": "https://picsum.photos/seed/manager3/400/400", "imageHint": "woman portrait" }
+    { "id": "manager3", "name": "মাওলানা উসমান গনী", "position": "শিক্ষা সচিব", "image": "https://picsum.photos/seed/manager3/400/400", "imageHint": "man portrait" },
+    { "id": "manager4", "name": "ক্বারী আহমাদুল্লাহ", "position": "প্রধান ক্বারী", "image": "https://picsum.photos/seed/manager4/400/400", "imageHint": "man portrait" },
+    { "id": "manager5", "name": "আলহাজ্ব মোঃ ইউসুফ", "position": "সভাপতি, পরিচালনা পর্ষদ", "image": "https://picsum.photos/seed/manager5/400/400", "imageHint": "man portrait" },
+    { "id": "manager6", "name": "ড. ফাতিমা আক্তার", "position": "সদস্য, পরিচালনা পর্ষদ", "image": "https://picsum.photos/seed/manager6/400/400", "imageHint": "woman portrait" }
   ],
   "testimonials": [
     { "id": 1, "quote": "এই মাদ্রাসার শিক্ষাব্যবস্থা অত্যন্ত উন্নত। আমার সন্তানের নৈতিক ও শিক্ষাগত উন্নতিতে আমি সন্তুষ্ট। শিক্ষকদের আন্তরিকতা প্রশংসার যোগ্য।", "author": "মোঃ আব্দুর রহমান", "title": "অভিভাবক" },
