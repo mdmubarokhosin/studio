@@ -63,7 +63,9 @@ export default function ContactPage() {
         </div>
       </main>
       <Footer />
-      <BottomNav />
+      <div className="pb-16 md:pb-0">
+        <BottomNav />
+      </div>
     </div>
   );
 }
