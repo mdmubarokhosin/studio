@@ -12,11 +12,13 @@ export default function ResponsiveNav() {
     <nav id="floating-nav" className="fixed bottom-0 left-0 w-full h-[var(--bottom-nav-height)] lg:h-auto lg:w-auto z-50">
       <div id="nav-container">
         {navLinks.map((link) => (
-          <Link key={link.href} href={link.href} legacyBehavior>
-            <a className={cn('nav-link', pathname === link.href && 'active')}>
-              <link.icon />
-              <span>{link.label}</span>
-            </a>
+          <Link
+            key={link.href}
+            href={link.href}
+            className={cn('nav-link', pathname === link.href && 'active')}
+          >
+            <link.icon />
+            <span>{link.label}</span>
           </Link>
         ))}
       </div>
