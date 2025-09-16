@@ -16,7 +16,7 @@ const Header = () => {
             </Link>
           ))}
           <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
-            <Link href="#contact">যোগাযোগ</Link>
+            <Link href="/contact">যোগাযোগ</Link>
           </Button>
         </nav>
       </div>

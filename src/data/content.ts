@@ -14,12 +14,12 @@ import { Home, Info, BookOpen, ScrollText, Images, Phone, Users, GraduationCap, 
 export const appName = 'মাহমুদপুর আশরাফুল উলূম মাদ্রাসা';
 
 export const navLinks: NavLink[] = [
-  { label: 'হোম', href: '#home', icon: Home },
-  { label: 'আমাদের সম্পর্কে', href: '#about', icon: Info },
-  { label: 'বিভাগসমূহ', href: '#programs', icon: BookOpen },
-  { label: 'নোটিশ', href: '#notice', icon: ScrollText },
-  { label: 'গ্যালারি', href: '#gallery', icon: Images },
-  { label: 'যোগাযোগ', href: '#contact', icon: Phone },
+  { label: 'হোম', href: '/', icon: Home },
+  { label: 'আমাদের সম্পর্কে', href: '/about', icon: Info },
+  { label: 'বিভাগসমূহ', href: '/programs', icon: BookOpen },
+  { label: 'নোটিশ', href: '/notice', icon: ScrollText },
+  { label: 'গ্যালারি', href: '/gallery', icon: Images },
+  { label: 'যোগাযোগ', href: '/contact', icon: Phone },
 ];
 
 export const heroSlides: HeroSlide[] = [
@@ -29,7 +29,7 @@ export const heroSlides: HeroSlide[] = [
     subtitle: 'মাহমুদপুর (উত্তর চন্দন পারুলিয়া) আশরাফুল উলূম মাদ্রাসা',
     image: 'https://picsum.photos/seed/hero1/1920/1080',
     imageHint: 'education building',
-    button: { text: 'ভর্তি তথ্য', href: '#contact' },
+    button: { text: 'ভর্তি তথ্য', href: '/contact' },
   },
   {
     id: 'hero2',
@@ -44,7 +44,7 @@ export const heroSlides: HeroSlide[] = [
     subtitle: 'জ্ঞানার্জনের পথকে আরও মসৃণ করতে আমাদের প্রচেষ্টা।',
     image: 'https://picsum.photos/seed/hero3/1920/1080',
     imageHint: 'library books',
-    button: { text: 'আরও জানুন', href: '#about' },
+    button: { text: 'আরও জানুন', href: '/about' },
   },
 ];
 
