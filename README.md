@@ -1,4 +1,4 @@
-# Firebase Studio
+# মাদ্রাসা প্রজেক্ট
 
 This is a NextJS starter in Firebase Studio.
 
