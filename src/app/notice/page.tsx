@@ -4,7 +4,7 @@ import NoticeSection from '@/components/sections/notice';
 export default function NoticePage() {
   return (
     <>
-      <main className="flex-1 py-16">
+      <main className="flex-1 py-8 md:py-16">
         <div className="container mx-auto px-4">
           <NoticeSection />
         </div>

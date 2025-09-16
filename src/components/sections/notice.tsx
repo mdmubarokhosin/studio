@@ -7,14 +7,14 @@ import { ChevronRight, Megaphone } from 'lucide-react';
 
 const NoticeSection = () => {
   return (
-    <section id="notice" className="scroll-mt-20">
-      <div className="text-center mb-12">
-        <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary">নোটিশ বোর্ড</h2>
-        <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">গুরুত্বপূর্ণ ঘোষণা এবং সর্বশেষ খবর।</p>
+    <section id="notice" className="scroll-mt-16">
+      <div className="text-center mb-8 md:mb-12">
+        <h2 className="font-headline text-2xl md:text-4xl font-bold text-primary">নোটিশ বোর্ড</h2>
+        <p className="mt-3 md:mt-4 max-w-2xl mx-auto text-sm md:text-base text-muted-foreground">গুরুত্বপূর্ণ ঘোষণা এবং সর্বশেষ খবর।</p>
       </div>
       <Card className="shadow-lg">
         <CardHeader>
-          <CardTitle className="flex items-center gap-2">
+          <CardTitle className="flex items-center gap-2 text-xl md:text-2xl">
             <Megaphone className="text-accent" />
             সর্বশেষ নোটিশ
           </CardTitle>
@@ -25,12 +25,12 @@ const NoticeSection = () => {
               <li key={notice.id} className="flex flex-col sm:flex-row sm:items-center justify-between p-3 bg-secondary/50 rounded-lg">
                 <div className="flex-1">
                   <div className="flex items-center gap-3">
-                    <p className="font-semibold">{notice.title}</p>
-                    {notice.isNew && <Badge variant="destructive" className="animate-pulse bg-primary text-primary-foreground">নতুন</Badge>}
+                    <p className="font-semibold text-sm md:text-base">{notice.title}</p>
+                    {notice.isNew && <Badge variant="destructive" className="animate-pulse bg-primary text-primary-foreground text-xs">নতুন</Badge>}
                   </div>
-                  <p className="text-sm text-muted-foreground mt-1 sm:mt-0">{notice.date}</p>
+                  <p className="text-xs md:text-sm text-muted-foreground mt-1 sm:mt-0">{notice.date}</p>
                 </div>
-                <Button asChild variant="ghost" size="sm" className="mt-2 sm:mt-0 self-start sm:self-center">
+                <Button asChild variant="ghost" size="sm" className="mt-2 sm:mt-0 self-start sm:self-center text-xs md:text-sm">
                   <Link href={notice.link}>
                     বিস্তারিত
                     <ChevronRight className="w-4 h-4 ml-1" />

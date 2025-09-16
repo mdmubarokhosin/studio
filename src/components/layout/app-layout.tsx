@@ -16,7 +16,7 @@ import {
   useSidebar,
 } from '@/components/ui/sidebar';
 import { appName, navLinks } from '@/data/content';
-import { Button } from '@/components/ui/button';
+import { SheetTitle } from '@/components/ui/sheet';
 
 function AppHeader() {
   const { isMobile } = useSidebar();
@@ -27,7 +27,7 @@ function AppHeader() {
           {isMobile && <SidebarTrigger />}
           <Link
             href="/"
-            className="font-headline text-xl font-bold text-primary"
+            className="font-headline text-lg md:text-xl font-bold text-primary"
           >
             {appName}
           </Link>
@@ -49,6 +49,7 @@ function AppSidebar() {
   return (
     <Sidebar collapsible="offcanvas" variant="floating">
       <SidebarHeader>
+        <SheetTitle className="sr-only">Main Menu</SheetTitle>
         <Link
           href="/"
           className="font-headline text-xl font-bold text-primary"
@@ -83,7 +84,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (
     <SidebarProvider>
       <AppSidebar />
-      <SidebarInset className="flex flex-col">
+      <SidebarInset className="flex min-h-screen flex-col">
         <AppHeader />
         <div className="flex-1">{children}</div>
       </SidebarInset>
