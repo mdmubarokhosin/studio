@@ -9,7 +9,7 @@ import {
   type Testimonial,
   type SocialLink,
 } from '@/types';
-import { Home, Info, BookOpen, ScrollText, Images, Phone, Users, GraduationCap, Building, UserCheck, Facebook, Youtube, Twitter } from 'lucide-react';
+import { Home, Info, BookOpen, ScrollText, Images, Phone, Users, GraduationCap, Building, UserCheck, Facebook, Youtube, Twitter, ClipboardList } from 'lucide-react';
 import contentData from './content.json';
 
 const iconMap = {
@@ -26,6 +26,7 @@ const iconMap = {
   Facebook,
   Youtube,
   Twitter,
+  ClipboardList
 };
 
 export const appName = contentData.appName;

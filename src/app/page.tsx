@@ -7,6 +7,7 @@ import GallerySection from '@/components/sections/gallery';
 import TestimonialsSection from '@/components/sections/testimonials';
 import ManagementSection from '@/components/sections/management';
 import NoticeSection from '@/components/sections/notice';
+import ResultsSection from '@/components/sections/results';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
           <AboutSection />
           <StatsSection />
           <ProgramsSection />
+          <ResultsSection />
           <NoticeSection />
           <GallerySection />
           <ManagementSection />
