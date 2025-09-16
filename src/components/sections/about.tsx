@@ -1,6 +1,6 @@
 import { aboutContent } from '@/data/content';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { CheckCircle } from 'lucide-react';
+import { CircleCheckBig } from 'lucide-react';
 
 const AboutSection = () => {
   return (
@@ -13,7 +13,7 @@ const AboutSection = () => {
         <Card className="shadow-lg">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 font-headline text-xl md:text-2xl text-accent">
-              <CheckCircle />
+              <CircleCheckBig />
               {aboutContent.missionTitle}
             </CardTitle>
           </CardHeader>
@@ -24,7 +24,7 @@ const AboutSection = () => {
         <Card className="shadow-lg">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 font-headline text-xl md:text-2xl text-accent">
-              <CheckCircle />
+              <CircleCheckBig />
               {aboutContent.visionTitle}
             </CardTitle>
           </CardHeader>
