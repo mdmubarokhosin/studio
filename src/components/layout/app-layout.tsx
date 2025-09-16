@@ -16,6 +16,7 @@ import {
   useSidebar,
 } from '@/components/ui/sidebar';
 import { appName, navLinks } from '@/data/content';
+import ResponsiveNav from './responsive-nav';
 
 function AppHeader() {
   const { isMobile, toggleSidebar } = useSidebar();
@@ -79,6 +80,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
     <SidebarProvider>
       <div className="flex min-h-screen flex-col">
         <AppSidebar />
+        <ResponsiveNav />
         <SidebarInset>
           <AppHeader />
           <div className="flex-1">{children}</div>

@@ -1,0 +1,25 @@
+'use client';
+
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { navLinks } from '@/data/content';
+import { cn } from '@/lib/utils';
+
+export default function ResponsiveNav() {
+  const pathname = usePathname();
+
+  return (
+    <nav id="floating-nav" className="fixed bottom-0 left-0 w-full h-[var(--bottom-nav-height)] lg:h-auto lg:w-auto z-50">
+      <div id="nav-container">
+        {navLinks.map((link) => (
+          <Link key={link.href} href={link.href} legacyBehavior>
+            <a className={cn('nav-link', pathname === link.href && 'active')}>
+              <link.icon />
+              <span>{link.label}</span>
+            </a>
+          </Link>
+        ))}
+      </div>
+    </nav>
+  );
+}
