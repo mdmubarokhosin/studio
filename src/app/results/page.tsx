@@ -27,6 +27,9 @@ import { Download, Search } from 'lucide-react';
 import resultsData from '@/data/results.json';
 import Footer from '@/components/layout/footer';
 import { useToast } from '@/hooks/use-toast';
+import jsPDF from 'jspdf';
+import 'jspdf-autotable';
+import { appName } from '@/data/content';
 
 const formSchema = z.object({
   studentId: z.string().min(1, { message: 'শিক্ষার্থীর আইডি দিন।' }),
@@ -44,6 +47,11 @@ type StudentResult = {
   total: number;
   grade: string;
 };
+
+// Extend jsPDF with autoTable
+interface jsPDFWithAutoTable extends jsPDF {
+  autoTable: (options: any) => jsPDF;
+}
 
 export default function ResultsPage() {
   const [result, setResult] = useState<StudentResult | null>(null);
@@ -72,10 +80,60 @@ export default function ResultsPage() {
   }
   
   const handleDownload = () => {
+    if (!result) return;
+    
+    const doc = new jsPDF() as jsPDFWithAutoTable;
+
+    // Add custom font
+    // This is a placeholder for a Bengali font. For actual Bengali rendering, 
+    // you would need a font that supports Bengali characters and embed it.
+    // For this example, we'll proceed without custom fonts, which may not render Bengali correctly.
+    
+    // Header
+    doc.setFontSize(18);
+    doc.text(appName, 105, 20, { align: 'center' });
+    doc.setFontSize(12);
+    doc.text("মার্কশিট", 105, 30, { align: 'center' });
+
+    // Student Info
+    doc.setFontSize(10);
+    doc.text(`শিক্ষার্থীর নাম: ${result.name}`, 14, 45);
+    doc.text(`আইডি: ${result.id}`, 14, 52);
+    doc.text(`শ্রেণী: ${result.class}`, 120, 45);
+    doc.text(`বছর: ${result.year}`, 120, 52);
+
+    // Create table
+    const tableColumn = ["বিষয়", "নম্বর"];
+    const tableRows: (string | number)[][] = [];
+
+    Object.entries(result.subjects).forEach(([subject, marks]) => {
+      const row = [subject, marks];
+      tableRows.push(row);
+    });
+
+    doc.autoTable({
+        head: [tableColumn],
+        body: tableRows,
+        startY: 60,
+        theme: 'grid',
+        headStyles: { fillColor: [22, 163, 74] }, // Primary color
+        // If font is correctly set up for Bengali:
+        // styles: { font: 'YourBengaliFont', fontStyle: 'normal' }, 
+    });
+
+    // Footer of table
+    const finalY = doc.autoTable.previous.finalY;
+    doc.setFontSize(12);
+    doc.setFont('helvetica', 'bold');
+    doc.text(`মোট নম্বর: ${result.total}`, 14, finalY + 10);
+    doc.text(`গ্রেড: ${result.grade}`, 14, finalY + 17);
+
+    // Save the PDF
+    doc.save(`marksheet_${result.id}.pdf`);
+
     toast({
-        title: "কার্যকারিতা উপলব্ধ নয়",
-        description: "পিডিএফ ডাউনলোড করার সুবিধাটি শীঘ্রই আসছে।",
-        variant: "destructive",
+        title: "ডাউনলোড শুরু হয়েছে",
+        description: "মার্কশিট পিডিএফ ফাইল ডাউনলোড হচ্ছে।",
     });
   }
 
