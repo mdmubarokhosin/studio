@@ -16,6 +16,7 @@ import {
   useSidebar,
 } from '@/components/ui/sidebar';
 import { appName, navLinks } from '@/data/content';
+import { SheetTitle } from '../ui/sheet';
 
 function AppHeader() {
   const { isMobile } = useSidebar();
@@ -47,6 +48,7 @@ function AppSidebar() {
 
   return (
     <Sidebar collapsible="offcanvas" variant="floating">
+      <SheetTitle className="sr-only">Main Menu</SheetTitle>
       <SidebarHeader>
         <Link
           href="/"
@@ -60,7 +62,7 @@ function AppSidebar() {
         <SidebarMenu>
           {navLinks.map((link) => (
             <SidebarMenuItem key={link.href}>
-              <Link href={link.href} passHref>
+              <Link href={link.href} passHref legacyBehavior>
                 <SidebarMenuButton
                   as="a"
                   isActive={pathname === link.href}
