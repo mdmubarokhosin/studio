@@ -60,9 +60,8 @@ function AppSidebar() {
         <SidebarMenu>
           {navLinks.map((link) => (
             <SidebarMenuItem key={link.href}>
-              <Link href={link.href} passHref>
+              <Link href={link.href} passHref asChild>
                 <SidebarMenuButton
-                  as="a"
                   isActive={pathname === link.href}
                   onClick={handleLinkClick}
                 >
@@ -81,8 +80,8 @@ function AppSidebar() {
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (
     <SidebarProvider>
-      <AppSidebar />
       <div className="flex min-h-screen flex-col">
+        <AppSidebar />
         <SidebarInset>
           <AppHeader />
           <div className="flex-1">{children}</div>
