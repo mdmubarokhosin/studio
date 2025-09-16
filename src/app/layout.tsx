@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import AppLayout from '@/components/layout/app-layout';
+import './results/print-styles.css';
 
 export const metadata: Metadata = {
   title: 'মাহমুদপুর (উত্তর চন্দন পারুলিয়া) আশরাফুল উলূম মাদ্রাসা',

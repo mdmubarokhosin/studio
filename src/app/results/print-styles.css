@@ -1,0 +1,25 @@
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #marksheet, #marksheet * {
+    visibility: visible;
+  }
+  
+  #marksheet {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-only-card {
+    box-shadow: none !important;
+    border: none !important;
+  }
+}
