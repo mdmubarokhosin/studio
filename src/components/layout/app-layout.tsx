@@ -14,7 +14,6 @@ import {
   SidebarInset,
   SidebarTrigger,
   useSidebar,
-  SheetTitle,
 } from '@/components/ui/sidebar';
 import { appName, navLinks } from '@/data/content';
 
@@ -49,7 +48,6 @@ function AppSidebar() {
   return (
     <Sidebar>
       <SidebarHeader>
-        <SheetTitle className="sr-only">Menu</SheetTitle>
         <Link
           href="/"
           className="font-headline text-xl font-bold text-primary"
