@@ -21,7 +21,7 @@ const NoticeSection = () => {
         </CardHeader>
         <CardContent>
           <ul className="space-y-4">
-            {notices.map((notice) => (
+            {notices.slice(0, 3).map((notice) => (
               <li key={notice.id} className="flex flex-col sm:flex-row sm:items-center justify-between p-3 bg-secondary/50 rounded-lg">
                 <div className="flex-1">
                   <div className="flex items-center gap-3">
@@ -41,6 +41,11 @@ const NoticeSection = () => {
           </ul>
         </CardContent>
       </Card>
+      <div className="text-center mt-8">
+        <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold">
+            <Link href="/notice">সকল নোটিশ দেখুন</Link>
+        </Button>
+      </div>
     </section>
   );
 };

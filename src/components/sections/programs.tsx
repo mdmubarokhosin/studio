@@ -1,6 +1,8 @@
 import { programs } from '@/data/content';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { BookMarked } from 'lucide-react';
+import { Button } from '../ui/button';
+import Link from 'next/link';
 
 const ProgramsSection = () => {
   return (
@@ -21,6 +23,11 @@ const ProgramsSection = () => {
             </CardContent>
           </Card>
         ))}
+      </div>
+       <div className="text-center mt-8">
+          <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold">
+              <Link href="/programs">সকল বিভাগ দেখুন</Link>
+          </Button>
       </div>
     </section>
   );

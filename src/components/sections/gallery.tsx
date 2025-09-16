@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { galleryImages } from '@/data/content';
 import { Card } from '@/components/ui/card';
+import { Button } from '../ui/button';
 
 const GallerySection = () => {
   return (
@@ -11,7 +12,7 @@ const GallerySection = () => {
         <p className="mt-3 md:mt-4 max-w-2xl mx-auto text-sm md:text-base text-muted-foreground">আমাদের মাদ্রাসার কিছু স্মরণীয় মুহূর্ত।</p>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4">
-        {galleryImages.map((image) => (
+        {galleryImages.slice(0, 6).map((image) => (
           <Link key={image.id} href={image.src} target="_blank" rel="noopener noreferrer">
             <Card className="overflow-hidden group aspect-w-16 aspect-h-9 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <Image
@@ -25,6 +26,11 @@ const GallerySection = () => {
             </Card>
           </Link>
         ))}
+      </div>
+      <div className="text-center mt-8">
+        <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold">
+            <Link href="/gallery">সম্পূর্ণ গ্যালারি দেখুন</Link>
+        </Button>
       </div>
     </section>
   );

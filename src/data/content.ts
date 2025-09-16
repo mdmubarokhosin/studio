@@ -8,6 +8,7 @@ import {
   type ManagementMember,
   type Testimonial,
   type SocialLink,
+  type HistoryContent
 } from '@/types';
 import { Home, Info, BookOpen, ScrollText, Images, Phone, Users, GraduationCap, Building, UserCheck, Facebook, Youtube, Twitter, ClipboardList } from 'lucide-react';
 import contentData from './content.json';
@@ -29,7 +30,7 @@ const iconMap = {
   ClipboardList
 };
 
-export const appName = contentData.appName;
+export const appName: string = contentData.appName;
 
 export const navLinks: NavLink[] = contentData.navLinks.map(link => ({
   ...link,
@@ -39,6 +40,7 @@ export const navLinks: NavLink[] = contentData.navLinks.map(link => ({
 export const heroSlides: HeroSlide[] = contentData.heroSlides;
 
 export const aboutContent = contentData.aboutContent;
+export const historyContent: HistoryContent = contentData.historyContent;
 
 export const stats: StatItem[] = contentData.stats.map(stat => ({
   ...stat,
