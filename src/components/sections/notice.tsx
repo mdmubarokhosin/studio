@@ -28,10 +28,10 @@ const NoticeSection = () => {
                     <p className="font-semibold text-sm md:text-base">{notice.title}</p>
                     {notice.isNew && <Badge variant="destructive" className="animate-pulse bg-primary text-primary-foreground text-xs">নতুন</Badge>}
                   </div>
-                  <p className="text-xs md:text-sm text-muted-foreground mt-1 sm:mt-0">{notice.date}</p>
+                  <p className="text-xs md:text-sm text-muted-foreground mt-1">{notice.date}</p>
                 </div>
                 <Button asChild variant="ghost" size="sm" className="mt-2 sm:mt-0 self-start sm:self-center text-xs md:text-sm">
-                  <Link href={notice.link}>
+                  <Link href={`/notice/${notice.id}`}>
                     বিস্তারিত
                     <ChevronRight className="w-4 h-4 ml-1" />
                   </Link>

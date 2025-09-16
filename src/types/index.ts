@@ -44,8 +44,9 @@ export type Notice = {
   id: number;
   title: string;
   date: string;
-  link: string;
   isNew: boolean;
+  description: string;
+  pdfLink: string | null;
 };
 
 export type GalleryImage = {
