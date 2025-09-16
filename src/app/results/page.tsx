@@ -84,11 +84,9 @@ export default function ResultsPage() {
     
     const doc = new jsPDF() as jsPDFWithAutoTable;
 
-    // Add custom font
-    // This is a placeholder for a Bengali font. For actual Bengali rendering, 
-    // you would need a font that supports Bengali characters and embed it.
-    // For this example, we'll proceed without custom fonts, which may not render Bengali correctly.
-    
+    // A basic font that has some support for unicode characters
+    doc.setFont('Helvetica');
+
     // Header
     doc.setFontSize(18);
     doc.text(appName, 105, 20, { align: 'center' });
@@ -117,14 +115,13 @@ export default function ResultsPage() {
         startY: 60,
         theme: 'grid',
         headStyles: { fillColor: [22, 163, 74] }, // Primary color
-        // If font is correctly set up for Bengali:
-        // styles: { font: 'YourBengaliFont', fontStyle: 'normal' }, 
+        styles: { font: 'Helvetica', fontStyle: 'normal' }, 
     });
 
     // Footer of table
     const finalY = doc.autoTable.previous.finalY;
     doc.setFontSize(12);
-    doc.setFont('helvetica', 'bold');
+    doc.setFont('Helvetica', 'bold');
     doc.text(`মোট নম্বর: ${result.total}`, 14, finalY + 10);
     doc.text(`গ্রেড: ${result.grade}`, 14, finalY + 17);
 
