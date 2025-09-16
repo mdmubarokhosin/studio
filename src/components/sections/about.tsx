@@ -1,6 +1,8 @@
 import { aboutContent } from '@/data/content';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CircleCheckBig } from 'lucide-react';
+import { Button } from '../ui/button';
+import Link from 'next/link';
 
 const AboutSection = () => {
   return (
@@ -32,6 +34,11 @@ const AboutSection = () => {
             <p className="text-sm md:text-base">{aboutContent.vision}</p>
           </CardContent>
         </Card>
+      </div>
+       <div className="text-center mt-8">
+          <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold">
+              <Link href="/about">আরও জানুন</Link>
+          </Button>
       </div>
     </section>
   );
