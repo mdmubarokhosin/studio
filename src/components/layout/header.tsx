@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { appName, navLinks } from '@/data/content';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from '@/components/ui/sheet';
 import { Menu } from 'lucide-react';
 
 const Header = () => {
@@ -30,6 +30,9 @@ const Header = () => {
               </Button>
             </SheetTrigger>
             <SheetContent side="left">
+              <SheetHeader>
+                <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
+              </SheetHeader>
               <div className="flex flex-col gap-4 p-4">
                 <Link href="/" className="font-headline text-lg font-bold text-primary mb-4">
                   {appName}

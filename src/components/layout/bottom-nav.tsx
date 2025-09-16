@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 import { navLinks } from '@/data/content';
 import { cn } from '@/lib/utils';
 import { Menu } from 'lucide-react';
-import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '../ui/sheet';
 import { Button } from '../ui/button';
 import { appName } from '@/data/content';
 
@@ -43,6 +43,9 @@ const BottomNav = () => {
                 </button>
             </SheetTrigger>
             <SheetContent side="bottom" className="h-3/4">
+              <SheetHeader>
+                <SheetTitle className="sr-only">More Links</SheetTitle>
+              </SheetHeader>
               <div className="flex flex-col gap-4 p-4">
                 <Link href="/" className="font-headline text-lg font-bold text-primary mb-4">
                   {appName}
