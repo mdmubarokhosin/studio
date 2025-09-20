@@ -12,7 +12,7 @@
       "id": "hero1",
       "title": "ঐতিহ্য ও আধুনিকতার সমন্বয়ে আদর্শ মানুষ গড়ার প্রত্যয়",
       "subtitle": "মাহমুদপুর (উত্তর চন্দন পারুলিয়া) আশরাফুল উলূম মাদ্রাসা",
-      "image": "/images/slider/1.jpg",
+      "image": "https://picsum.photos/seed/islamic-architecture/1920/1080",
       "imageHint": "islamic architecture",
       "button": { "text": "ভর্তি চলছে", "href": "/contact" }
     },
@@ -20,14 +20,14 @@
       "id": "hero2",
       "title": "নৈপুন্য ও নৈতিকতার এক অনন্য বাতিঘর",
       "subtitle": "যেখানে প্রতিটি শিক্ষার্থীর মেধা ও মনন বিকাশে আমরা যত্নবান।",
-      "image": "/images/slider/2.jpg",
+      "image": "https://picsum.photos/seed/quran-reading/1920/1080",
       "imageHint": "quran reading"
     },
     {
       "id": "hero3",
       "title": "জ্ঞানার্জনের এক পবিত্র উদ্যান",
       "subtitle": "আমাদের রয়েছে সমৃদ্ধ লাইব্রেরি ও আধুনিক শিক্ষা উপকরণ।",
-      "image": "/images/slider/3.jpg",
+      "image": "https://picsum.photos/seed/mosque-interior/1920/1080",
       "imageHint": "mosque interior",
       "button": { "text": "আরও জানুন", "href": "/about" }
     }
@@ -142,3 +142,5 @@
     { "name": "Twitter", "href": "#", "icon": "Twitter" }
   ]
 }
+
+    
