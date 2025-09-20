@@ -12,12 +12,12 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: '**',
+        hostname: 'picsum.photos',
       },
       {
-        protocol: 'http',
-        hostname: '**',
-      }
+        protocol: 'https',
+        hostname: 'blogger.googleusercontent.com',
+      },
     ],
   },
 };
