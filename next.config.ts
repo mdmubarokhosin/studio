@@ -14,10 +14,6 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'picsum.photos',
       },
-      {
-        protocol: 'https',
-        hostname: 'blogger.googleusercontent.com',
-      },
     ],
   },
 };
