@@ -50,7 +50,6 @@
 @layer base {
   * {
     @apply border-border;
-    -webkit-tap-highlight-color: transparent;
   }
   body {
     @apply bg-background text-foreground;
@@ -65,6 +64,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+#floating-nav {
+  @apply md:hidden;
+}
+
 #nav-container {
   display: flex;
   justify-content: space-around;
@@ -76,6 +79,7 @@ body {
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
 }
 .nav-link {
+  -webkit-tap-highlight-color: transparent !important;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -87,13 +91,8 @@ body {
   transition: color 0.2s ease-in-out;
   font-weight: 500;
   cursor: pointer;
-  -webkit-tap-highlight-color: transparent !important;
   outline: none;
   touch-action: manipulation;
-}
-
-.tap-transparent {
-  -webkit-tap-highlight-color: transparent !important;
 }
 
 .nav-link.active {
