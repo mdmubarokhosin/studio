@@ -14,7 +14,7 @@ const AboutSection = () => {
         <p className="mt-3 md:mt-4 max-w-3xl mx-auto text-sm md:text-base text-muted-foreground">{aboutContent.description}</p>
       </div>
       <div className="grid md:grid-cols-2 gap-6 md:gap-8">
-        <Card className="shadow-lg">
+        <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 font-headline text-xl md:text-2xl text-accent">
               <CircleCheckBig />
@@ -25,7 +25,7 @@ const AboutSection = () => {
             <p className="text-sm md:text-base">{aboutContent.mission}</p>
           </CardContent>
         </Card>
-        <Card className="shadow-lg">
+        <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 font-headline text-xl md:text-2xl text-accent">
               <CircleCheckBig />
