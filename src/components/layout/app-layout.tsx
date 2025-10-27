@@ -1,20 +1,65 @@
 'use client';
 
 import Link from 'next/link';
-import { appName } from '@/data/content';
+import { appName, navLinks } from '@/data/content';
 import ResponsiveNav from './responsive-nav';
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from '@/components/ui/sheet';
+import { Button } from '@/components/ui/button';
+import { Home, Info, ScrollText, Phone, Menu } from 'lucide-react';
 
 function AppHeader() {
+  const allNavLinks = [
+    ...navLinks,
+    { href: '/programs', label: 'বিভাগসমূহ', icon: Home },
+    { href: '/teachers', label: 'শিক্ষকমণ্ডলী', icon: Home },
+    { href: '/admission', label: 'ভর্তি', icon: Home },
+    { href: '/results', label: 'ফলাফল', icon: Home },
+    { href: '/gallery', label: 'গ্যালারি', icon: Home },
+  ];
+
   return (
-    <header className="sticky top-0 z-40 flex h-16 items-center gap-4 border-b bg-background/80 px-4 backdrop-blur-sm md:h-20 md:px-6">
+    <header className="sticky top-0 z-40 flex h-16 items-center gap-4 border-b bg-background px-4 md:h-20 md:px-6">
       <div className="flex w-full items-center justify-between">
         <div className="flex items-center gap-2">
           <Link
             href="/"
-            className="font-headline text-xl md:text-2xl font-bold text-primary"
+            className="font-headline text-xl font-bold text-primary md:text-2xl"
           >
             {appName}
           </Link>
+        </div>
+        <div className="flex items-center gap-2">
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="outline" size="icon">
+                <Menu className="h-6 w-6" />
+                <span className="sr-only">Open menu</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="left">
+              <SheetHeader>
+                <SheetTitle className="text-primary">{appName}</SheetTitle>
+              </SheetHeader>
+              <nav className="mt-8 grid gap-4">
+                {allNavLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
+                  >
+                    <link.icon className="h-5 w-5" />
+                    {link.label}
+                  </Link>
+                ))}
+              </nav>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </header>
