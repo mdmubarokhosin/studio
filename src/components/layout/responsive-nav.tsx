@@ -9,7 +9,7 @@ export default function ResponsiveNav() {
   const pathname = usePathname();
 
   return (
-    <nav id="floating-nav" className="fixed bottom-0 left-0 w-full h-[65px] z-50">
+    <nav id="floating-nav" className="fixed bottom-0 left-0 w-full h-[65px] z-50 md:hidden">
       <div id="nav-container">
         {navLinks.map((link) => (
           <Link
