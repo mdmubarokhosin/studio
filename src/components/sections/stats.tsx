@@ -1,3 +1,5 @@
+'use client';
+
 import { stats } from '@/data/content';
 import CountUp from '@/components/count-up';
 import { Card, CardContent } from '@/components/ui/card';

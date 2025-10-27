@@ -1,3 +1,5 @@
+'use client';
+
 import { aboutContent } from '@/data/content';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CircleCheckBig } from 'lucide-react';

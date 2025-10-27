@@ -1,3 +1,5 @@
+'use client';
+
 import { programs } from '@/data/content';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { BookMarked } from 'lucide-react';
