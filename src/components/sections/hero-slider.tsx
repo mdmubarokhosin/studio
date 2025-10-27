@@ -11,22 +11,17 @@ const HeroSlider = () => {
   const [slideIndex, setSlideIndex] = useState(1);
 
   const plusSlides = (n: number) => {
-    showSlides(slideIndex + n);
-  };
-
-  const currentSlide = (n: number) => {
-    showSlides(n);
-  };
-
-  const showSlides = (n: number) => {
-    let newIndex = n;
-    if (n > heroSlides.length) {
+    let newIndex = slideIndex + n;
+    if (newIndex > heroSlides.length) {
       newIndex = 1;
-    }
-    if (n < 1) {
+    } else if (newIndex < 1) {
       newIndex = heroSlides.length;
     }
     setSlideIndex(newIndex);
+  };
+
+  const currentSlide = (n: number) => {
+    setSlideIndex(n);
   };
   
   useEffect(() => {
