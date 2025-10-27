@@ -86,8 +86,12 @@ body {
   transition: color 0.2s ease-in-out;
   font-weight: 500;
   cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
 }
+
+.tap-transparent {
+  -webkit-tap-highlight-color: transparent !important;
+}
+
 .nav-link.active {
   color: hsl(var(--primary));
   font-weight: 700;

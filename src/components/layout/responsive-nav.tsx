@@ -21,7 +21,7 @@ export default function ResponsiveNav() {
           <Link
             key={link.href}
             href={link.href}
-            className={cn('nav-link', pathname === link.href && 'active')}
+            className={cn('nav-link tap-transparent', pathname === link.href && 'active')}
           >
             <link.icon className="w-6 h-6 mb-1" />
             <span>{link.label}</span>
