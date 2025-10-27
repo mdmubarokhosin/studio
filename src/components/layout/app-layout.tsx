@@ -11,16 +11,23 @@ import {
   SheetTrigger,
 } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
-import { Home, Info, ScrollText, Phone, Menu } from 'lucide-react';
+import {
+  Menu,
+  BookMarked,
+  Users,
+  ClipboardList,
+  FileText,
+  Images,
+} from 'lucide-react';
 
 function AppHeader() {
   const allNavLinks = [
     ...navLinks,
-    { href: '/programs', label: 'বিভাগসমূহ', icon: Home },
-    { href: '/teachers', label: 'শিক্ষকমণ্ডলী', icon: Home },
-    { href: '/admission', label: 'ভর্তি', icon: Home },
-    { href: '/results', label: 'ফলাফল', icon: Home },
-    { href: '/gallery', label: 'গ্যালারি', icon: Home },
+    { href: '/programs', label: 'বিভাগসমূহ', icon: BookMarked },
+    { href: '/teachers', label: 'শিক্ষকমণ্ডলী', icon: Users },
+    { href: '/admission', label: 'ভর্তি', icon: ClipboardList },
+    { href: '/results', label: 'ফলাফল', icon: FileText },
+    { href: '/gallery', label: 'গ্যালারি', icon: Images },
   ];
 
   return (
