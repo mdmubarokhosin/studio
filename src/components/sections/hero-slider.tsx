@@ -1,47 +1,61 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { heroSlides } from '@/data/content';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/carousel';
 import { Button } from '@/components/ui/button';
-import Autoplay from 'embla-carousel-autoplay';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const HeroSlider = () => {
-  const plugin = React.useRef(
-    Autoplay({ delay: 5000, stopOnInteraction: true })
-  );
+  const [slideIndex, setSlideIndex] = useState(1);
+
+  const plusSlides = (n: number) => {
+    showSlides(slideIndex + n);
+  };
+
+  const currentSlide = (n: number) => {
+    showSlides(n);
+  };
+
+  const showSlides = (n: number) => {
+    let newIndex = n;
+    if (n > heroSlides.length) {
+      newIndex = 1;
+    }
+    if (n < 1) {
+      newIndex = heroSlides.length;
+    }
+    setSlideIndex(newIndex);
+  };
+  
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      plusSlides(1);
+    }, 5000); // Change image every 5 seconds
+    return () => clearTimeout(timer);
+  }, [slideIndex]);
+
 
   return (
-    <section className="relative h-[60vh] md:h-[80vh] w-full">
-      <Carousel
-        plugins={[plugin.current]}
-        className="w-full h-full"
-        onMouseEnter={plugin.current.stop}
-        onMouseLeave={plugin.current.reset}
-        opts={{ loop: true }}
-      >
-        <CarouselContent className="h-full">
-          {heroSlides.map((slide) => (
-            <CarouselItem key={slide.id} className="h-full">
-              <div className="relative h-full w-full">
-                <Image
-                  src={slide.image}
-                  alt={slide.title}
-                  fill
-                  className="object-cover"
-                  data-ai-hint={slide.imageHint}
-                  priority={slide.id === 'hero1'}
-                />
-                <div className="absolute inset-0 bg-black/50" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white p-4">
+    <section className="relative w-full overflow-hidden">
+      <div className="relative max-w-full mx-auto">
+        {heroSlides.map((slide, index) => (
+          <div
+            key={slide.id}
+            className={`mySlides fade ${slideIndex === index + 1 ? 'block' : 'hidden'}`}
+          >
+            <div className="relative h-[60vh] md:h-[80vh] w-full">
+              <Image
+                src={slide.image}
+                alt={slide.title}
+                fill
+                className="object-cover"
+                data-ai-hint={slide.imageHint}
+                priority={index === 0}
+              />
+              <div className="absolute inset-0 bg-black/50" />
+               <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white p-4">
                   <h1 className="font-headline text-3xl md:text-5xl lg:text-6xl font-bold !text-primary-foreground drop-shadow-lg">
                     {slide.title}
                   </h1>
@@ -54,13 +68,35 @@ const HeroSlider = () => {
                     </Button>
                   )}
                 </div>
-              </div>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 text-white bg-black/20 hover:bg-black/50 border-none" />
-        <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 text-white bg-black/20 hover:bg-black/50 border-none" />
-      </Carousel>
+            </div>
+          </div>
+        ))}
+
+        <button
+          className="prev"
+          onClick={() => plusSlides(-1)}
+          aria-label="Previous Slide"
+        >
+          <ChevronLeft className="w-8 h-8" />
+        </button>
+        <button
+          className="next"
+          onClick={() => plusSlides(1)}
+          aria-label="Next Slide"
+        >
+          <ChevronRight className="w-8 h-8" />
+        </button>
+      </div>
+
+      <div className="absolute bottom-4 left-0 right-0 text-center">
+        {heroSlides.map((_, index) => (
+          <span
+            key={index}
+            className={`dot ${slideIndex === index + 1 ? 'active' : ''}`}
+            onClick={() => currentSlide(index + 1)}
+          ></span>
+        ))}
+      </div>
     </section>
   );
 };
