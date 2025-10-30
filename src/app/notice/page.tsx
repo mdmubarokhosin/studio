@@ -21,7 +21,7 @@ export default function NoticePage() {
                     <CardHeader>
                         <div className="flex justify-between items-start">
                             <Megaphone className="w-8 h-8 text-accent" />
-                            {notice.isNew && <Badge variant="destructive" className="animate-pulse bg-primary text-primary-foreground text-xs">নতুন</Badge>}
+                            {notice.isNew && <Badge className="bg-primary text-primary-foreground text-xs">নতুন</Badge>}
                         </div>
                         <CardTitle className="pt-2 text-base md:text-lg">{notice.title}</CardTitle>
                     </CardHeader>
