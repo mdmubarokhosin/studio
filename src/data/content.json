@@ -4,7 +4,10 @@
   "navLinks": [
     { "label": "হোম", "href": "/", "icon": "Home" },
     { "label": "পরিচিতি", "href": "/about", "icon": "Info" },
+    { "label": "বিভাগসমূহ", "href": "/programs", "icon": "BookOpen" },
+    { "label": "ফলাফল", "href": "/results", "icon": "ClipboardList" },
     { "label": "নোটিশ", "href": "/notice", "icon": "ScrollText" },
+    { "label": "গ্যালারি", "href": "/gallery", "icon": "Images" },
     { "label": "যোগাযোগ", "href": "/contact", "icon": "Phone" }
   ],
   "heroSlides": [
