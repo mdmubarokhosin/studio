@@ -30,7 +30,7 @@ const GallerySection = () => {
         ))}
       </div>
       <div className="text-center mt-8">
-        <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold">
+        <Button asChild size="lg" variant="default" className="font-bold">
             <Link href="/gallery">সম্পূর্ণ গ্যালারি দেখুন</Link>
         </Button>
       </div>

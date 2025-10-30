@@ -12,6 +12,7 @@ import {
 } from '@/types';
 import { Home, Info, BookOpen, ScrollText, Images, Phone, Users, GraduationCap, Building, UserCheck, Facebook, Youtube, Twitter, ClipboardList } from 'lucide-react';
 import contentData from './content.json';
+import placeholderImageData from '../lib/placeholder-images.json';
 
 const iconMap = {
   Home,
@@ -30,6 +31,20 @@ const iconMap = {
   ClipboardList
 };
 
+const placeholderImageMap = new Map(
+  placeholderImageData.placeholderImages.map(p => [p.id, p])
+);
+
+function getImage(id: string | undefined) {
+  if (!id) return { src: '', hint: '' };
+  const placeholder = placeholderImageMap.get(id);
+  return {
+    src: placeholder?.imageUrl || '',
+    hint: placeholder?.imageHint || '',
+  };
+}
+
+
 export const appName: string = contentData.appName;
 
 export const navLinks: NavLink[] = contentData.navLinks.map(link => ({
@@ -37,7 +52,14 @@ export const navLinks: NavLink[] = contentData.navLinks.map(link => ({
   icon: iconMap[link.icon as keyof typeof iconMap],
 }));
 
-export const heroSlides: HeroSlide[] = contentData.heroSlides;
+export const heroSlides: HeroSlide[] = contentData.heroSlides.map(slide => {
+  const { src, hint } = getImage(slide.imageId);
+  return {
+    ...slide,
+    image: src,
+    imageHint: hint,
+  };
+});
 
 export const aboutContent = contentData.aboutContent;
 export const historyContent: HistoryContent = contentData.historyContent;
@@ -49,8 +71,25 @@ export const stats: StatItem[] = contentData.stats.map(stat => ({
 
 export const programs: Program[] = contentData.programs;
 export const notices: Notice[] = contentData.notices;
-export const galleryImages: GalleryImage[] = contentData.galleryImages;
-export const management: ManagementMember[] = contentData.management;
+
+export const galleryImages: GalleryImage[] = contentData.galleryImages.map(image => {
+    const { src, hint } = getImage(image.id);
+    return {
+        ...image,
+        src,
+        hint
+    };
+});
+
+export const management: ManagementMember[] = contentData.management.map(member => {
+    const { src, hint } = getImage(member.id);
+    return {
+        ...member,
+        image: src,
+        imageHint: hint
+    };
+});
+
 export const testimonials: Testimonial[] = contentData.testimonials;
 
 export const footerContent = {

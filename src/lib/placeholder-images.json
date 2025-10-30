@@ -1,76 +1,75 @@
-
 {
   "placeholderImages": [
     {
-      "id": "hero1",
-      "description": "Madrasa building with students in front",
-      "imageUrl": "https://picsum.photos/seed/hero1/1920/1080",
+      "id": "hero1_static",
+      "description": "Actual madrasa building",
+      "imageUrl": "https://darululoomhathazari.com/media/img/slider/7efacc318422f9c09506d0f2e3d1aea2.jpg",
       "imageHint": "education building"
     },
     {
-      "id": "hero2",
+      "id": "hero2_placeholder",
       "description": "Students in a classroom studying",
-      "imageUrl": "https://picsum.photos/seed/hero2/1920/1080",
+      "imageUrl": "https://images.unsplash.com/photo-1752564291723-bb816a3dfb33?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzdHVkZW50cyUyMGNsYXNzcm9vbXxlbnwwfHx8fDE3NjE4MTc2MDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "students classroom"
     },
     {
-      "id": "hero3",
+      "id": "hero3_placeholder",
       "description": "Library with many books",
-      "imageUrl": "https://picsum.photos/seed/hero3/1920/1080",
+      "imageUrl": "https://images.unsplash.com/photo-1485322551133-3a4c27a9d925?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxsaWJyYXJ5JTIwYm9va3N8ZW58MHx8fHwxNzYxNzM4Mzg4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "library books"
     },
     {
       "id": "gallery1",
       "description": "Annual sports event",
-      "imageUrl": "https://picsum.photos/seed/gallery1/600/400",
+      "imageUrl": "https://images.unsplash.com/photo-1510766528597-60f9f1c154b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzcG9ydHMlMjBldmVudHxlbnwwfHx8fDE3NjE3NDc5Mjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "sports event"
     },
     {
       "id": "gallery2",
       "description": "Prize giving ceremony",
-      "imageUrl": "https://picsum.photos/seed/gallery2/600/400",
+      "imageUrl": "https://images.unsplash.com/photo-1740630267005-db9af10c0164?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwcml6ZSUyMGNlcmVtb255fGVufDB8fHx8MTc2MTgyMTg4MHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "prize ceremony"
     },
     {
       "id": "gallery3",
       "description": "Students planting trees",
-      "imageUrl": "https://picsum.photos/seed/gallery3/600/400",
+      "imageUrl": "https://images.unsplash.com/photo-1720323650006-6dd831b7c8b3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzdHVkZW50cyUyMG5hdHVyZXxlbnwwfHx8fDE3NjE4MjE4ODB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "students nature"
     },
     {
       "id": "gallery4",
       "description": "Cultural program performance",
-      "imageUrl": "https://picsum.photos/seed/gallery4/600/400",
+      "imageUrl": "https://images.unsplash.com/photo-1760258920997-b9783bd0e148?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y3VsdHVyYWwlMjBwZXJmb3JtYW5jZXxlbnwwfHx8fDE3NjE4MjE4ODB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "cultural performance"
     },
     {
       "id": "gallery5",
       "description": "Science fair project",
-      "imageUrl": "https://picsum.photos/seed/gallery5/600/400",
+      "imageUrl": "https://images.unsplash.com/photo-1554475901-4538ddfbccc2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzY2llbmNlJTIwZmFpcnxlbnwwfHx8fDE3NjE3NTIzMDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "science fair"
     },
     {
       "id": "gallery6",
       "description": "Graduation day",
-      "imageUrl": "https://picsum.photos/seed/gallery6/600/400",
+      "imageUrl": "https://images.unsplash.com/photo-1620459134634-867369354df9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxncmFkdWF0aW9uJTIwZGF5fGVufDB8fHx8MTc2MTgyMTg4MHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "graduation day"
     },
     {
       "id": "manager1",
       "description": "Profile picture of the principal",
-      "imageUrl": "https://picsum.photos/seed/manager1/400/400",
+      "imageUrl": "https://images.unsplash.com/photo-1594672830234-ba4cfe1202dc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWFuJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzYxNzU2MzYxfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "man portrait"
     },
     {
       "id": "manager2",
       "description": "Profile picture of the vice-principal",
-      "imageUrl": "https://picsum.photos/seed/manager2/400/400",
+      "imageUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjE3NTYzNjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "man portrait"
     },
     {
       "id": "manager3",
       "description": "Profile picture of the head of education",
-      "imageUrl": "https://picsum.photos/seed/manager3/400/400",
+      "imageUrl": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc2MTgwMzQ2MHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "woman portrait"
     }
   ]

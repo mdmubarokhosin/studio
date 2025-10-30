@@ -58,7 +58,7 @@ const HeroSlider = () => {
                     {slide.subtitle}
                   </p>
                   {slide.button && (
-                    <Button asChild size="lg" className="mt-8 bg-accent hover:bg-accent/90 text-accent-foreground font-bold">
+                    <Button asChild size="lg" variant="default" className="mt-8 bg-accent hover:bg-accent/90 text-accent-foreground font-bold">
                       <Link href={slide.button.href}>{slide.button.text}</Link>
                     </Button>
                   )}
