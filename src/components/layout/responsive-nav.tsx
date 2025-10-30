@@ -18,7 +18,7 @@ export default function ResponsiveNav() {
       className="fixed bottom-0 left-0 z-50 h-[var(--bottom-nav-height)] w-full max-w-screen-lg lg:left-1/2 lg:-translate-x-1/2"
     >
       <div id="nav-container">
-        {bottomNavLinks.map((link) => {
+        {navLinks.map((link) => {
           const Icon = link.icon;
           return (
             <Link

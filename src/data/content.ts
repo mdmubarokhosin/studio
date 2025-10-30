@@ -10,7 +10,7 @@ import {
   type SocialLink,
   type HistoryContent
 } from '@/types';
-import { Home, Info, BookOpen, ScrollText, Images, Phone, Users, GraduationCap, Building, UserCheck, Facebook, Youtube, Twitter, ClipboardList } from 'lucide-react';
+import { Home, Info, BookOpen, ScrollText, Images, Phone, Users, GraduationCap, Building, UserCheck, Facebook, Youtube, Twitter, ClipboardList, Code } from 'lucide-react';
 import contentData from './content.json';
 import placeholderImageData from '../lib/placeholder-images.json';
 
@@ -28,7 +28,8 @@ const iconMap = {
   Facebook,
   Youtube,
   Twitter,
-  ClipboardList
+  ClipboardList,
+  Code
 };
 
 const placeholderImageMap = new Map(

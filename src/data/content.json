@@ -8,24 +8,25 @@
     { "label": "ফলাফল", "href": "/results", "icon": "ClipboardList" },
     { "label": "নোটিশ", "href": "/notice", "icon": "ScrollText" },
     { "label": "গ্যালারি", "href": "/gallery", "icon": "Images" },
+    { "label": "টেকনোলজি", "href": "/technology", "icon": "Code" },
     { "label": "যোগাযোগ", "href": "/contact", "icon": "Phone" }
   ],
   "heroSlides": [
     {
-      "id": "hero1",
+      "id": "hero1_static",
       "title": "ঐতিহ্য ও আধুনিকতার সমন্বয়ে আদর্শ মানুষ গড়ার প্রত্যয়",
       "subtitle": "মাহমুদপুর (উত্তর চন্দন পারুলিয়া) আশরাফুল উলূম মাদ্রাসা",
       "imageId": "hero1_static",
       "button": { "text": "ভর্তি চলছে", "href": "/contact" }
     },
     {
-      "id": "hero2",
+      "id": "hero2_placeholder",
       "title": "নৈপুন্য ও নৈতিকতার এক অনন্য বাতিঘর",
       "subtitle": "যেখানে প্রতিটি শিক্ষার্থীর মেধা ও মনন বিকাশে আমরা যত্নবান।",
       "imageId": "hero2_placeholder"
     },
     {
-      "id": "hero3",
+      "id": "hero3_placeholder",
       "title": "জ্ঞানার্জনের এক পবিত্র উদ্যান",
       "subtitle": "আমাদের রয়েছে সমৃদ্ধ লাইব্রেরি ও আধুনিক শিক্ষা উপকরণ।",
       "imageId": "hero3_placeholder",
