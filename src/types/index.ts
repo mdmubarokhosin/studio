@@ -45,6 +45,7 @@ export type Notice = {
   title: string;
   date: string;
   link: string;
+  description: string;
   isNew: boolean;
 };
 
