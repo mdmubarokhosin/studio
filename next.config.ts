@@ -18,6 +18,10 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'darululoomhathazari.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
     ],
   },
 };
