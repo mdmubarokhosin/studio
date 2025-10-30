@@ -56,21 +56,21 @@
 }
 :root {
   --bottom-nav-height: 55px;
-  --ui-bg-base: #ffffff;
-  --ui-bg-component: #ffffff;
-  --ui-border-base: #eeeeee;
-  --ui-fg-base: #000000;
-  --ui-fg-muted: #555555;
-  --ui-fg-interactive: #000000;
+  --ui-bg-base: hsl(var(--background));
+  --ui-bg-component: hsl(var(--card));
+  --ui-border-base: hsl(var(--border));
+  --ui-fg-base: hsl(var(--foreground));
+  --ui-fg-muted: hsl(var(--muted-foreground));
+  --ui-fg-interactive: hsl(var(--primary));
 }
 body {
-  font-family: 'Noto Serif Bengali', serif;
-  background-color: var(--ui-bg-base);
-  color: var(--ui-fg-base);
-  min-height: 100vh;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: 'Noto Serif Bengali', serif;
+    background-color: var(--ui-bg-base);
+    color: var(--ui-fg-base);
+    min-height: 100vh;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 ::selection {
   background-color: var(--ui-fg-base);
