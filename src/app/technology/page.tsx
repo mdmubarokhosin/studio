@@ -3,51 +3,95 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
 const NextjsIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-8 w-8 text-black dark:invert"><path d="M12.193 7.093a1 1 0 0 0-1.071 1.072v8.66a1 1 0 0 0 1.071 1.072z"/><path d="M12.53 7.093a1 1 0 0 1 1.07 1.072v8.66a1 1 0 0 1-1.07 1.072z"/><path d="M16.19 3.5a1.071 1.071 0 0 0-1.07 1.071v14.858a1.071 1.071 0 0 0 1.07 1.071h.214a1.071 1.071 0 0 0 1.071-1.071V4.571A1.071 1.071 0 0 0 16.405 3.5h-.214z"/><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 128 128" className="h-8 w-8 text-black dark:invert">
+        <path fill="currentColor" d="M64 0C28.7 0 0 28.7 0 64s28.7 64 64 64s64-28.7 64-64S99.3 0 64 0zm0 120C33.1 120 8 94.9 8 64S33.1 8 64 8s56 25.1 56 56s-25.1 56-56 56z"></path>
+        <path fill="currentColor" d="M95.6 34.2h-3.8c-2.4 0-4.5 1.9-4.7 4.3v42.9c0 2.6 2.1 4.7 4.7 4.7h3.8c2.6 0 4.7-2.1 4.7-4.7V38.5c0-2.5-2.1-4.3-4.7-4.3zM50.5 34.2c-2.2 0-4.1 1.6-4.5 3.7l-26.8 52c-.6 1.1-.1 2.5 1 3.1c.4.2.8.3 1.2.3c.8 0 1.6-.4 2.1-1.1l27-52.5c.6-1.1.1-2.5-1-3.1c-.5-.3-1.1-.4-1.5-.4z"></path>
+    </svg>
 );
 
 const ReactIcon = () => (
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#61DAFB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="h-8 w-8"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.5" fill="#61DAFB"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#61DAFB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="h-8 w-8">
+        <circle cx="12" cy="12" r="2" fill="#61DAFB"></circle>
+        <g>
+            <ellipse cx="12" cy="12" rx="11" ry="4.2"></ellipse>
+            <ellipse cx="12" cy="12" rx="11" ry="4.2" transform="rotate(60 12 12)"></ellipse>
+            <ellipse cx="12" cy="12" rx="11" ry="4.2" transform="rotate(120 12 12)"></ellipse>
+        </g>
+    </svg>
 );
 
 const TypescriptIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#3178C6" stroke="white" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="h-8 w-8"><path d="M0 0h24v24H0z" fill="none"/><path d="M2 2h20v20H2z" fill="#3178C6"/><path d="M12.4 12.3l-3 2.9h-.8v-7.3h3.5c1.8 0 2.8.9 2.8 2.3 0 1.3-.9 2.1-2.5 2.1zm-1.1-3h-1.6v4.6h1.6c1.1 0 1.6-.4 1.6-1.3s-.5-1.3-1.6-1.3zm6.6-2.5h-3.2v7.3h1.2V9.3h2V8z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" className="h-8 w-8">
+        <path fill="#3178C6" d="M1.5 1.5v21h21v-21h-21z" />
+        <path fill="white" d="M12.3 13.4l-1.6 1.6h-.7v-7.2h3.5c1.8 0 2.8.9 2.8 2.3 0 1.4-.9 2.3-2.5 2.3zm-1-3.5h-1.3v5.1h1.3c1.1 0 1.6-.4 1.6-1.3s-.5-1.3-1.6-1.3zm6.6-2.1h-3.2v7.2h1.2V9.2h2V8z" />
+    </svg>
 );
 
 const TailwindIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-8 w-8 text-[#38BDF8]"><path d="M12 12c-3.333 0-6.667-1-10-3 2-3.333 4-5 7-5 3.333 0 6.667 1.333 10 4-2 3.333-4 5-7 5z"/><path d="M19 12c-3.333 0-6.667-1-10-3 2-3.333 4-5 7-5 3.333 0 6.667 1.333 10 4-2 3.333-4 5-7 5zM5 15c3.333 0 6.667 1 10 3-2 3.333-4 5-7 5-3.333 0-6.667-1.333-10-4 2-3.333 4-5 7-5z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" className="h-8 w-8">
+    <path fill="#38BDF8" d="M12 2.585l-7.415 7.415a2 2 0 0 0 0 2.828l7.415 7.415a2 2 0 0 0 2.828 0l7.415-7.415a2 2 0 0 0 0-2.828L14.828 2.585a2 2 0 0 0-2.828 0zM8 12a4 4 0 1 1 8 0a4 4 0 0 1-8 0z" />
+  </svg>
 );
 
 const ShadcnIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-8 w-8"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2l9 4.9V17L12 22l-9-5.1V7z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256" className="h-8 w-8 text-black dark:invert">
+    <path fill="currentColor" d="m208.3 49.9-80-48a8.2 8.2 0 0 0-8.6 0l-80 48a8 8 0 0 0-4.3 7.4v97.4a8 8 0 0 0 4.3 7.4l80 48a8.2 8.2 0 0 0 8.6 0l80-48a8 8 0 0 0 4.3-7.4V57.3a8 8 0 0 0-4.3-7.4ZM128 24.8l67.9 40.7L128 106.3L60.1 65.5Zm-88 52.7L120 118v84.7l-80-48Zm176 39.9l-80 48V118l80-40.5Z"></path>
+  </svg>
 );
 
 const FirebaseIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-8 w-8"><path d="M4.64 19.37C3.17 17.9 2.5 16.02 2.5 14.1c0-1.92.67-3.8 2.14-5.27L15.27 2.5 4.64 19.37z" fill="#FFC107"/><path d="M19.36 4.63C17.9 3.17 16.02 2.5 14.1 2.5c-1.92 0-3.8.67-5.27 2.14L2.5 15.27 19.36 4.63z" fill="#FFA000"/><path d="M19.36 4.63L8.73 20.5 19.36 4.63z" fill="#F57C00"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" className="h-8 w-8">
+    <path fill="#FFCA28" d="M12.93 2.54L11.5 4.3l-5.72 8.95l-1.9 4.33a.49.49 0 0 0 .58.58l4.33-1.9l9.3-5.9z"/>
+    <path fill="#FFA000" d="M2.59 13.4l-1.9 4.33a.49.49 0 0 0 .58.58l4.33-1.9l3.52-1.57l-6.53-1.44z"/>
+    <path fill="#F57C00" d="M12.93 2.54L5.61 17.62l3.41-1.49l9.73-6.17c-2.31-3.2-4.14-5.22-5.82-7.42z"/>
+    <path fill="#FFC107" d="M18.8 14.37L12.93 2.54c-1.68 2.2-3.51 4.12-5.82 7.42l5.72 2.53z"/>
+  </svg>
 );
 
 const GenkitIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-8 w-8"><path d="M15.5 15.5L12 12l3.5-3.5L12 5l-3.5 3.5L12 12l-3.5 3.5L12 19z" fill="#4285F4"/><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" className="h-8 w-8">
+        <defs>
+            <linearGradient id="genkit-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style={{stopColor: '#6e89f8', stopOpacity: 1}} />
+            <stop offset="100%" style={{stopColor: '#4285f4', stopOpacity: 1}} />
+            </linearGradient>
+        </defs>
+        <path fill="url(#genkit-gradient)" d="M15.5 15.5L12 12l3.5-3.5L12 5l-3.5 3.5L12 12l-3.5 3.5L12 19z"/>
+        <path fill="url(#genkit-gradient)" d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/>
+    </svg>
 );
 
 const FirestoreIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#4285F4" stroke="currentColor" strokeWidth="0.1" className="h-8 w-8"><path d="M6.87 18.12l-4.37-4.37v-7.5l4.37-4.37 8.5 4.9v9.8z"/><path d="M17.13 5.88l4.37 4.37v7.5l-4.37 4.37-8.5-4.9v-9.8z" fill="#669DF6"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" className="h-8 w-8">
+        <path fill="#8AB4F8" d="M6.87 18.12L2.5 13.75v-7.5l4.37-4.37l8.5 4.9v9.8z"/>
+        <path fill="#4285F4" d="M17.13 5.88l-1.9-1.07l-8.5 4.9l8.5 4.9l1.9-1.07l4.37-4.38v-2.2z"/>
+        <path fill="#C6DAFC" d="M17.13 5.88v12.25l-8.5 4.9v-9.8z"/>
+    </svg>
 );
 
 const VercelIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="h-8 w-8"><path d="M12 2L2 19h20L12 2z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" className="h-8 w-8 text-black dark:invert"><path d="M12 2L2 19h20L12 2z"/></svg>
 );
 
 const GithubActionsIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#2088FF" stroke="currentColor" strokeWidth="0.1" className="h-8 w-8"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-2 15l-4-4 1.4-1.4 2.6 2.6 6.6-6.6L18 7l-8 8z"/><circle cx="12" cy="12" r="3"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" className="h-8 w-8">
+        <path fill="#2088FF" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm5.2 8.7l-6.1 6.1c-.2.2-.5.3-.7.3s-.5-.1-.7-.3l-3.1-3.1c-.4-.4-.4-1 0-1.4s1-.4 1.4 0l2.4 2.4l5.4-5.4c.4-.4 1-.4 1.4 0s.4 1 0 1.4z"/>
+        <circle fill="#2088FF" cx="12" cy="12" r="3"/>
+    </svg>
 );
 
 const GoogleAdsenseIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-8 w-8"><path d="M12 2a10 10 0 1 0 10 10c0-2.2-.7-4.2-2-5.7l-1.3 1.3c.9 1.1 1.3 2.5 1.3 3.9 0 3.9-3.1 7-7 7s-7-3.1-7-7 3.1-7 7-7v2l4-3-4-3v2z" fill="#4285F4"/><path d="M12 8v4h4" stroke="white" strokeWidth="2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" className="h-8 w-8">
+        <path fill="#4285F4" d="M12 2a10 10 0 1 0 10 10c0-2.2-.7-4.2-2-5.7l-1.3 1.3c.9 1.1 1.3 2.5 1.3 3.9 0 3.9-3.1 7-7 7s-7-3.1-7-7s3.1-7 7-7v2l4-3-4-3v2z"/>
+        <path d="M12 8v4h4" stroke="white" strokeWidth="2" fill="none"/>
+    </svg>
 );
 
 const FirebaseAnalyticsIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-8 w-8"><path d="M12.5 3.5v17l7-7-7-10z" fill="#FFCA28"/><path d="M11.5 3.5v17l-7-7 7-10z" fill="#F57C00"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" className="h-8 w-8">
+        <path fill="#FFCA28" d="M12.5 3.5v17l7-7-7-10z"/>
+        <path fill="#F57C00" d="M11.5 3.5v17l-7-7 7-10z"/>
+    </svg>
 );
 
 
