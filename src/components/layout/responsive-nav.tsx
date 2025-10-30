@@ -8,13 +8,17 @@ import { cn } from '@/lib/utils';
 export default function ResponsiveNav() {
   const pathname = usePathname();
 
+  const bottomNavLinks = navLinks.filter(link => 
+    ['হোম', 'ফলাফল', 'নোটিশ', 'যোগাযোগ'].includes(link.label)
+  );
+
   return (
     <nav
       id="floating-nav"
       className="fixed bottom-0 left-0 z-50 h-[var(--bottom-nav-height)] w-full max-w-screen-lg lg:left-1/2 lg:-translate-x-1/2"
     >
       <div id="nav-container">
-        {navLinks.map((link) => {
+        {bottomNavLinks.map((link) => {
           const Icon = link.icon;
           return (
             <Link
