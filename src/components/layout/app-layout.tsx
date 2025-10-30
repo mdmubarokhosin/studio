@@ -13,55 +13,69 @@ function AppHeader() {
 
   return (
     <header className="sticky top-0 z-40 flex h-16 items-center gap-4 border-b bg-background px-4 md:h-20 md:px-6">
-      <div className="flex w-full items-center justify-between md:justify-center">
-        <div className="md:absolute md:left-6">
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="outline" size="icon">
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Toggle navigation menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="left">
-                <SheetHeader>
-                  <SheetTitle className="sr-only">নেভিগেশন মেনু</SheetTitle>
-                </SheetHeader>
-              <nav className="grid gap-6 text-lg font-medium">
-                <Link
-                  href="/"
-                  className="flex items-center gap-2 text-lg font-semibold"
-                >
-                  <School className="h-6 w-6 text-primary" />
-                  <span>{appName}</span>
-                </Link>
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className={cn(
-                      "flex items-center gap-4 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary",
-                      pathname === link.href && "bg-muted text-primary"
-                    )}
-                  >
-                    <link.icon className="h-5 w-5" />
-                    {link.label}
-                  </Link>
-                ))}
-              </nav>
-            </SheetContent>
-          </Sheet>
+      <div className="flex w-full items-center justify-between">
+        <div className="flex items-center gap-4">
+            <div className="md:hidden">
+            <Sheet>
+                <SheetTrigger asChild>
+                <Button variant="outline" size="icon">
+                    <Menu className="h-6 w-6" />
+                    <span className="sr-only">Toggle navigation menu</span>
+                </Button>
+                </SheetTrigger>
+                <SheetContent side="left">
+                    <SheetHeader>
+                    <SheetTitle className="sr-only">নেভিগেশন মেনু</SheetTitle>
+                    </SheetHeader>
+                <nav className="grid gap-6 text-lg font-medium">
+                    <Link
+                    href="/"
+                    className="flex items-center gap-2 text-lg font-semibold"
+                    >
+                    <School className="h-6 w-6 text-primary" />
+                    <span>{appName}</span>
+                    </Link>
+                    {navLinks.map((link) => (
+                    <Link
+                        key={link.href}
+                        href={link.href}
+                        className={cn(
+                        "flex items-center gap-4 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary",
+                        pathname === link.href && "bg-muted text-primary"
+                        )}
+                    >
+                        <link.icon className="h-5 w-5" />
+                        {link.label}
+                    </Link>
+                    ))}
+                </nav>
+                </SheetContent>
+            </Sheet>
+            </div>
+            <Link
+                href="/"
+                className="font-headline text-xl font-bold text-primary md:text-2xl"
+            >
+                {appName}
+            </Link>
         </div>
 
-        <div className="flex items-center gap-2">
-          <Link
-            href="/"
-            className="font-headline text-xl font-bold text-primary md:text-2xl"
-          >
-            {appName}
-          </Link>
-        </div>
+        <nav className="hidden md:flex items-center gap-4 text-sm font-medium">
+            {navLinks.map((link) => (
+                <Link
+                key={link.href}
+                href={link.href}
+                className={cn(
+                    "text-muted-foreground transition-colors hover:text-foreground",
+                    pathname === link.href && "text-foreground font-semibold"
+                )}
+                >
+                {link.label}
+                </Link>
+            ))}
+        </nav>
         
-        <div className="md:absolute md:right-6 md:w-[36px]"></div>
+        <div className="w-10 md:hidden"></div>
       </div>
     </header>
   );
