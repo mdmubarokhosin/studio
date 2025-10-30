@@ -15,7 +15,7 @@ function AppHeader() {
     <header className="sticky top-0 z-40 flex h-16 items-center justify-between gap-4 border-b bg-background px-4 md:h-20 md:px-6">
       <Sheet>
         <SheetTrigger asChild>
-          <Button variant="outline" size="icon" className="shrink-0 md:hidden">
+          <Button variant="outline" size="icon" className="shrink-0">
             <Menu className="h-5 w-5" />
             <span className="sr-only">Toggle navigation menu</span>
           </Button>
@@ -30,20 +30,24 @@ function AppHeader() {
               className="flex items-center gap-2 text-lg font-semibold"
             >
               <School className="h-6 w-6" />
-              <span className="sr-only">{appName}</span>
+              <span>{appName}</span>
             </Link>
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={cn(
-                  'text-muted-foreground hover:text-foreground',
-                  pathname === link.href && 'text-foreground'
-                )}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const Icon = link.icon;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={cn(
+                    'flex items-center gap-4 text-muted-foreground hover:text-foreground',
+                    pathname === link.href && 'text-foreground'
+                  )}
+                >
+                  <Icon className="h-5 w-5" />
+                  {link.label}
+                </Link>
+              );
+            })}
           </nav>
         </SheetContent>
       </Sheet>
@@ -58,20 +62,6 @@ function AppHeader() {
         </Link>
       </div>
 
-      <nav className="hidden flex-col gap-6 text-sm font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
-        {navLinks.map((link) => (
-          <Link
-            key={link.href}
-            href={link.href}
-            className={cn(
-              'transition-colors hover:text-foreground',
-              pathname === link.href ? 'text-foreground' : 'text-muted-foreground'
-            )}
-          >
-            {link.label}
-          </Link>
-        ))}
-      </nav>
     </header>
   );
 }
