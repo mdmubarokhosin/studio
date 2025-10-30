@@ -1,6 +1,6 @@
 
 {
-  "appName": "আশরাফুল উলূম",
+  "appName": "আমার মাদ্রাসা",
   "navLinks": [
     { "label": "হোম", "href": "/", "icon": "Home" },
     { "label": "পরিচিতি", "href": "/about", "icon": "Info" },
