@@ -20,7 +20,7 @@ export type HeroSlide = {
 
 export type HistoryMilestone = {
   year: string;
-  description: string;
+  description?: string;
 };
 
 export type HistoryContent = {
